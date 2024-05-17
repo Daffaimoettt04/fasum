@@ -1,6 +1,6 @@
 {
-    "name": "fasum",
-    "short_name": "fasum",
+    "name": "fasum_marcel",
+    "short_name": "fasum_marcel",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

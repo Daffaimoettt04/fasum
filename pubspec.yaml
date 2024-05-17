@@ -1,4 +1,4 @@
-name: fasum
+name: fasum_dapa
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -30,17 +30,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^1.1.1
-  firebase_core: ^2.27.1
-  firebase_auth: ^4.19.2
-  firebase_database: ^10.4.10
-  cloud_firestore: ^4.17.3
-  firebase_storage: ^11.7.5
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.6
+  cupertino_icons: ^1.0.8
+  firebase_core: ^2.30.1
+  firebase_auth: ^4.19.4
+  cloud_firestore: ^4.17.3
+  firebase_storage: ^11.7.5
+  image_picker: ^0.8.4+4
 
 dev_dependencies:
   flutter_test:
