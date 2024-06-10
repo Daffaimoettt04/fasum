@@ -1,4 +1,4 @@
-package com.example.fasum_marcel
+package com.example.fasum_dapa
 
 import io.flutter.embedding.android.FlutterActivity
 

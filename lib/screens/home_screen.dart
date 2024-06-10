@@ -5,7 +5,7 @@ import 'package:fasum_dapa/screens/sign_in_screen.dart';
 import 'add_post_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key});
 
   Future<void> signOut(BuildContext context) async {
     await FirebaseAuth.instance.signOut();
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Beranda'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         actions: [
           IconButton(
             onPressed: () {
@@ -49,6 +49,8 @@ class HomeScreen extends StatelessWidget {
               var username = data.containsKey('username') ? data['username'] : 'Anonim';
               var imageUrl = data.containsKey('image_url') ? data['image_url'] : null;
               var text = data.containsKey('text') ? data['text'] : '';
+              var latitude = data.containsKey('latitude') ? data['latitude'] : null;
+              var longitude = data.containsKey('longitude') ? data['longitude'] : null;
 
               return Card(
                 margin: EdgeInsets.all(10.0),
@@ -74,6 +76,15 @@ class HomeScreen extends StatelessWidget {
                             formattedDate,
                             style: TextStyle(
                               color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          if (latitude != null && longitude != null) // Menampilkan lokasi jika tersedia
+                            SizedBox(height: 8),
+                          Text(
+                            'Lokasi: $latitude, $longitude',
+                            style: TextStyle(
+                              color: Colors.blue,
                               fontSize: 12,
                             ),
                           ),
